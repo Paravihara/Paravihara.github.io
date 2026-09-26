@@ -1,42 +1,67 @@
 :root {
-  --sl-color-accent-low: #dceee6;
-  --sl-color-accent: #3f8f78;
-  --sl-color-accent-high: #1f5d4c;
-  --sl-color-white: #fbfaf5;
-  --sl-color-gray-1: #eef3ed;
-  --sl-color-gray-2: #d8e2db;
-  --sl-color-gray-3: #aabbb1;
-  --sl-color-gray-4: #60756b;
-  --sl-color-gray-5: #3d5148;
-  --sl-color-gray-6: #25372f;
-  --sl-color-black: #16241f;
-  --sl-font: "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
-  --sl-font-system: "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  --sl-color-accent-low: #dceee5;
+  --sl-color-accent: #2f7d61;
+  --sl-color-accent-high: #225c49;
+  --sl-color-white: #f1f5f1;
+  --sl-color-gray-1: #e6eee8;
+  --sl-color-gray-2: #cbd9cf;
+  --sl-color-gray-3: #a0b3a6;
+  --sl-color-gray-4: #728779;
+  --sl-color-gray-5: #4b5f51;
+  --sl-color-gray-6: #2e3b32;
+  --sl-color-black: #1c241f;
+  --sl-color-text: #cbd9cf;
+  --sl-color-text-accent: #9dd1b8;
+  --sl-font: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "STSong", "SimSun", serif;
+  --sl-font-system: "Noto Sans SC", "Source Han Sans SC", "Microsoft YaHei", "PingFang SC", "Segoe UI", sans-serif;
+}
+
+:root[lang^='zh'] {
+  --sl-font: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "STSong", "SimSun", serif;
+}
+
+:root[lang='en'] {
+  --sl-font: "Source Serif 4", "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
 }
 
 :root[data-theme='light'] {
-  --sl-color-bg: #f4f6ef;
-  --sl-color-bg-nav: #e8f0e8;
-  --sl-color-bg-sidebar: #edf3ed;
-  --sl-color-hairline-light: #cbdacf;
+  --sl-color-white: #1e2b24;
+  --sl-color-gray-1: #24342b;
+  --sl-color-gray-2: #33463a;
+  --sl-color-gray-3: #53675a;
+  --sl-color-gray-4: #718377;
+  --sl-color-gray-5: #c4d0c7;
+  --sl-color-gray-6: #e8eee9;
+  --sl-color-gray-7: #f5f7f2;
+  --sl-color-black: #fbfcf8;
+  --sl-color-accent-low: #dceee5;
+  --sl-color-accent: #2f7d61;
+  --sl-color-accent-high: #225c49;
+  --sl-color-text: #33463a;
+  --sl-color-text-accent: #225c49;
+  --sl-color-text-invert: #f5f7f2;
+  --sl-color-bg: #fbfcf8;
+  --sl-color-bg-nav: #f1f5ef;
+  --sl-color-bg-sidebar: #f5f7f2;
+  --sl-color-bg-inline-code: #edf2ed;
+  --sl-color-bg-accent: #2f7d61;
+  --sl-color-hairline-light: #d5dfd7;
+  --sl-color-hairline: #c4d0c7;
 }
 
 :root[data-theme='dark'] {
-  --sl-color-accent-low: #1e4037;
-  --sl-color-accent: #79c4a9;
-  --sl-color-accent-high: #d8f0e4;
-  --sl-color-white: #edf4ee;
-  --sl-color-gray-1: #d9e4dc;
-  --sl-color-gray-2: #b7c8bd;
-  --sl-color-gray-3: #84998d;
-  --sl-color-gray-4: #5b7166;
-  --sl-color-gray-5: #3d5148;
-  --sl-color-gray-6: #26372f;
-  --sl-color-black: #18231e;
-  --sl-color-bg: #18231e;
-  --sl-color-bg-nav: #1d2e26;
-  --sl-color-bg-sidebar: #1b2a23;
-  --sl-color-hairline-light: #365044;
+  --sl-color-accent-low: #1e4034;
+  --sl-color-accent: #83c6a7;
+  --sl-color-accent-high: #b9e2cd;
+  --sl-color-text: #cbd9cf;
+  --sl-color-text-accent: #b9e2cd;
+  --sl-color-bg: #1c241f;
+  --sl-color-bg-nav: #222d26;
+  --sl-color-bg-sidebar: #202923;
+  --sl-color-bg-inline-code: #2e3b32;
+  --sl-color-bg-accent: #83c6a7;
+  --sl-color-hairline-light: #3c5143;
+  --sl-color-hairline: #314238;
 }
 
 :root {
@@ -48,24 +73,37 @@
 }
 
 .sl-markdown-content {
-  font-size: 1.08rem;
-  line-height: 2;
-  letter-spacing: 0.01em;
+  color: var(--sl-color-text);
+  font-size: 1.06rem;
+  line-height: 1.9;
+  letter-spacing: 0.005em;
+  text-rendering: optimizeLegibility;
+  font-kerning: normal;
+}
+
+.sl-markdown-content p,
+.sl-markdown-content li {
+  color: var(--sl-color-text);
 }
 
 .sl-markdown-content p {
   margin-block: 1.2em;
 }
 
+.sl-markdown-content h1,
 .sl-markdown-content h2,
-.sl-markdown-content h3 {
-  color: var(--sl-color-accent-high);
-  letter-spacing: 0.02em;
+.sl-markdown-content h3,
+.sl-markdown-content h4,
+.sl-markdown-content h5,
+.sl-markdown-content h6 {
+  color: var(--sl-color-gray-1);
+  font-weight: 650;
+  letter-spacing: 0;
 }
 
 .sl-markdown-content blockquote {
   border-inline-start-color: var(--sl-color-accent);
-  background: color-mix(in srgb, var(--sl-color-accent-low) 42%, transparent);
+  background: color-mix(in srgb, var(--sl-color-accent-low) 55%, var(--sl-color-bg));
   padding: 0.8rem 1.2rem;
 }
 
@@ -83,12 +121,12 @@
 }
 
 .reading-note strong {
-  color: var(--sl-color-accent-high);
+  color: var(--sl-color-gray-1);
 }
 
 .term {
   border-bottom: 1px dotted var(--sl-color-accent);
-  color: var(--sl-color-accent-high);
+  color: var(--sl-color-text-accent);
   cursor: help;
 }
 
@@ -101,4 +139,23 @@
 .sutra-segment small {
   color: var(--sl-color-gray-4);
   font-family: var(--sl-font-system);
+}
+
+html[lang^='zh'] .sl-markdown-content {
+  font-size: 1.08rem;
+  line-height: 2;
+}
+
+html[lang='en'] .sl-markdown-content {
+  font-size: 1.075rem;
+  line-height: 1.82;
+  letter-spacing: 0;
+}
+
+@media (max-width: 50rem) {
+  .sl-markdown-content,
+  html[lang^='zh'] .sl-markdown-content,
+  html[lang='en'] .sl-markdown-content {
+    font-size: 1rem;
+  }
 }

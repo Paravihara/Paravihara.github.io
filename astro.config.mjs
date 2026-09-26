@@ -2,11 +2,12 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
 export default defineConfig({
-  site: 'https://pavaravihara.github.io',
+  site: 'https://paravihara.github.io',
   integrations: [
     starlight({
       title: 'Paravihara',
       description: '在经文、开示与观照之间安住。',
+      favicon: '/favicon.jpg',
       logo: {
         src: './src/assets/logo.jpg',
         alt: 'Paravihara 菩提树标志',
