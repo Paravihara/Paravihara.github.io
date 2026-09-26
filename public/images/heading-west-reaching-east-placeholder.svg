@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Series image placeholder</title>
+  <desc id="desc">A quiet neutral placeholder for the Heading West Reaching East cover image.</desc>
+  <rect width="1200" height="900" fill="#e6eee8"/>
+  <rect x="44" y="44" width="1112" height="812" fill="none" stroke="#a0b3a6" stroke-width="2"/>
+  <path d="M220 678c96-148 196-214 300-196 93 16 130 112 234 110 86-2 151-54 226-154 52 64 93 145 122 240H220Z" fill="#cbd9cf"/>
+  <circle cx="875" cy="238" r="84" fill="#d5e1d8"/>
+  <path d="M420 720c42-148 74-230 98-246 26 14 56 96 101 246M518 528c-64-36-113-42-148-17M548 547c73-49 133-58 180-28" fill="none" stroke="#728779" stroke-width="7" stroke-linecap="round"/>
+</svg>

@@ -1,28 +1,39 @@
 ---
 title: Heading West Reaching East
-description: A sixteen-part journey between modern science, cognition, complex systems, and Buddhist insight.
+description: A complete English book moving between cybernetics, cognition, dependent origination, and Buddhist liberation.
 sidebar:
-  label: Series overview
+  label: A Few Words and contents
 ---
 
 # Heading West Reaching East
 
-“Heading West Reaching East” is the English name for the Chinese series “东辕西辙”. Across sixteen essays, it moves between modern science and Eastern wisdom, asking how the world we experience is formed and how it can come to rest.
+*An Encounter of Buddhism in Cybernetics*
 
-The series is currently published primarily in Chinese. The overview below preserves its reading structure while English translations are added.
+## A Few Words
 
-## Reading paths
+This document is a rather rough translation of a set of Chinese articles from a WeChat channel I maintained a few years ago. The translation was done by DeepSeek. I only gave a very quick pass to correct major mistakes, which are surprisingly rare, so please forgive some wordiness and vagueness in the English expression.
 
-### 1. Begin with cognition
+The purpose of this series of articles is to build a bridge from the frontier of modern science to traditional Eastern thoughts, especially the ultimate wisdom of Dependent Origination revealed by the Buddha.
 
-The opening essays establish the language of cybernetics, observation, reality-making, vision, and the connection between cognition and Zen.
+There are three other series from that WeChat channel, sometimes referenced from the articles to follow. One is an annotated translation of the Ațțhakavagga and Pārāyanavagga of Suttanipāta (Snp 4 and Snp 5). A second is an annotated collections of Pali Canon and corresponding Agama suttas related to the original mindfulness practice. And the third one is an annotated selections of Zen Koans showing a hidden link between the original Chinese Zen and the early teachings of the Buddha. Right now, these three series remained to be translated. Current plan is to get them translated later this year and publish to a dedicated web site (tentatively: www.paravihara.org) for easy reference by interested practitioners.
 
-### 2. Return to lived reality
+Although very succinct and primitive, these four series should paint a rough picture of the astonishing breadth and depth of the Buddha’s Dependent Origination teaching and also show how the original mindfulness practice may be carried out using this wisdom. So that the Buddha’s promise of “anyone practicing mindfulness alone will reach either Anāgāmi or Arahantship in this very life” may be realized in our time.
 
-The middle essays bring those ideas into practice, public questions, artificial intelligence, history, and the human heart.
+Finally, I would like to remind potential readers that although this document may seem quite technical sometimes, it is not meant to provide knowledge or construct views and theories. Its sole purpose is to provide various perspectives and tools so that our inner-most delusions regarding the mind, the body and the world may be revealed and transcended. The only reason for their complexities is the complexity of layered and well protected delusions.
 
-### 3. Follow dependent origination onward
+Samana Țhitavīro
 
-The final essays return to dependent origination, nirvana, nonduality, and practical paths of cultivation.
+Feb. 1st, 2026
 
-For the complete article sequence, switch to 中文 and open the Chinese series overview.
+## Contents
+
+1. [Artificial Intelligence and the Hand of God](./01-artificial-intelligence-and-the-hand-of-god/)
+2. [The Magical Vision](./02-the-magical-vision/)
+3. [Chaos and Life](./03-chaos-and-life/)
+4. [Fractals in Nature](./04-fractals-in-nature/)
+5. [Cybernetics, the Seven Abodes of Consciousness and the Ancient Indian World Model](./05-cybernetics-seven-abodes-and-the-ancient-indian-world-model/)
+6. [Cybernetics, Dependent Origination and Zen](./06-cybernetics-dependent-origination-and-zen/)
+7. [Dependent Origination, the Third Crisis of Mathematics and Parinibbāna](./07-dependent-origination-the-third-crisis-of-mathematics-and-parinibbana/)
+8. [Appendix](./appendix/)
+
+The Chinese material remains available through the [中文专题入口](/talks/dong-xi-zhi/). The English manuscript follows the structure of the complete book supplied for this edition.

@@ -33,6 +33,20 @@ Use the language picker in the header to switch between 中文 and English. The 
 
 ## Heading West Reaching East
 
-This sixteen-part series moves between modern science, cognition, complex systems, and Buddhist insight. Its Chinese essays are arranged as individual pages so readers can follow the argument slowly and return to earlier concepts when needed.
+The complete English book moves between modern science, cognition, complex systems, and Buddhist insight. Its chapters follow the supplied manuscript from “A Few Words” through dependent origination and the appendix.
 
-[Open the series overview](/en/talks/dong-xi-zhi/)
+<div class="series-feature">
+<div class="series-feature__visual">
+<img src="/images/heading-west-reaching-east-placeholder.svg" alt="" loading="lazy" />
+</div>
+
+<div class="series-feature__body">
+<div class="series-feature__eyebrow">Complete English book · 7 chapters · Appendix</div>
+
+### Heading West Reaching East
+
+A slow reading path between cybernetics, cognition, dependent origination, and Buddhist liberation.
+
+<a class="series-feature__link" href="/en/talks/dong-xi-zhi/">Open the book and contents <span aria-hidden="true">→</span></a>
+</div>
+</div>
