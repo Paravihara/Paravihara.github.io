@@ -36,3 +36,17 @@ hero:
 - [导师开示](/talks/)：按系列与章节阅读。
 - [经文阅读](/sutras/)：在译文、原文与注释之间切换。
 - [概念辞典](/concepts/)：从一个词进入相关的经文与开示。
+
+## 东辕西辙
+
+一组在控制论、复杂系统与缘起法之间往返阅读的 16 篇文章。它从人工智能、认知与现实建构开始，经过视觉、七识住和禅宗，逐步走向缘起、涅槃与实修。
+
+<div class="series-feature">
+<div class="series-feature__eyebrow">导师开示 · 系列阅读 · 16 篇</div>
+
+### 从一个问题开始
+
+我们所经验的这个世界，是被发现的，还是被创造的？沿着“东辕西辙”顺读，可以在现代科学的模型与佛法的观照之间，慢慢看见这个问题的不同层次。
+
+<a class="series-feature__link" href="/talks/dong-xi-zhi/">进入东辕西辙系列 <span aria-hidden="true">→</span></a>
+</div>
