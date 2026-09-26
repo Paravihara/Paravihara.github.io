@@ -1,0 +1,85 @@
+---
+import '../styles/site.css';
+import { ClientRouter } from 'astro:transitions';
+
+interface Props {
+  description?: string;
+  title?: string;
+  active?: 'articles' | 'tags' | 'about';
+}
+
+const {
+  title,
+  description,
+  active = 'articles',
+} = Astro.props;
+const isEnglish = Astro.url.pathname === '/en' || Astro.url.pathname.startsWith('/en/');
+const siteName = isEnglish ? 'Paravihara' : '彼岸精舍';
+const root = isEnglish ? '/en' : '';
+const alternateLocale = isEnglish ? '/' : '/en/';
+const nav = isEnglish
+  ? [
+      { key: 'articles', label: 'Articles', href: `${root}/` },
+      { key: 'tags', label: 'Tags', href: `${root}/tags/` },
+      { key: 'about', label: 'About', href: `${root}/about/` },
+    ]
+  : [
+      { key: 'articles', label: '文章', href: `${root}/` },
+      { key: 'tags', label: '标签', href: `${root}/tags/` },
+      { key: 'about', label: '关于', href: `${root}/about/` },
+    ];
+---
+
+<!doctype html>
+<html lang={isEnglish ? 'en' : 'zh-CN'}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    {description && <meta name="description" content={description} />}
+    <title>{title && title !== siteName ? `${title} | ${siteName}` : siteName}</title>
+    <ClientRouter />
+    <script is:inline>
+      const storedTheme = localStorage.getItem('paravihara-theme');
+      const preferredTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.dataset.theme = storedTheme || preferredTheme;
+    </script>
+  </head>
+  <body>
+    <div class="site-shell">
+      <main class="site-main"><slot /></main>
+      <aside class="site-aside">
+        <div class="site-aside__intro">
+          <a id="site-title-link" class="site-title" href={root || '/'} aria-label="彼岸精舍 Paravihara">
+            <span class="site-title__latin">Paravihara</span>
+            <span class="site-title__cjk">彼岸精舍</span>
+          </a>
+        </div>
+        <nav class="site-nav" aria-label={isEnglish ? 'Site navigation' : '站点导航'}>
+          {nav.map((item) => (
+            <a class:list={{ active: active === item.key }} href={item.href}>{item.label}</a>
+          ))}
+        </nav>
+        <div class="site-aside__bottom">
+          <div class="site-tools">
+            <a id="language-switcher" class="locale-link" href={alternateLocale} aria-label={isEnglish ? 'Switch to Chinese' : '切换至英文'}>{isEnglish ? '中' : 'EN'}</a>
+            <button id="theme-toggle-button" class="icon-button" type="button" aria-label={isEnglish ? 'Toggle color theme' : '切换颜色主题'} data-theme-toggle>
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+                <path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.64 5.64l1.42 1.42M16.94 16.94l1.42 1.42M5.64 18.36l1.42-1.42M16.94 7.06l1.42-1.42" />
+                <circle cx="12" cy="12" r="3.5" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <script is:inline>
+      document.addEventListener('click', (event) => {
+        const toggle = event.target.closest('[data-theme-toggle]');
+        if (!toggle) return;
+        const nextTheme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+        document.documentElement.dataset.theme = nextTheme;
+        localStorage.setItem('paravihara-theme', nextTheme);
+      });
+    </script>
+  </body>
+</html>

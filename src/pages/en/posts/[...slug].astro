@@ -1,0 +1,22 @@
+---
+import { getCollection, render } from 'astro:content';
+import Article from '../../../layouts/Article.astro';
+import { isEnglishPost, isPostId, postTags, readTime, tableOfContents } from '../../../utils/posts';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+  return posts
+    .filter((post) => isPostId(post.id) && isEnglishPost(post.id) && !post.data.draft)
+    .map((post) => ({
+      params: { slug: post.id.replace(/^en\//, '') },
+      props: { post },
+    }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<Article title={post.data.title} description={post.data.description} published={post.data.published} updated={post.data.updated} tags={postTags(post)} readTime={readTime(post.body ?? '', true)} toc={tableOfContents(post.body ?? '')}>
+  <Content />
+</Article>

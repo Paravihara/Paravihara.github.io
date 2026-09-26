@@ -8,15 +8,12 @@ importers:
 
   .:
     devDependencies:
-      '@astrojs/starlight':
+      '@astrojs/mdx':
         specifier: latest
-        version: 0.42.4(astro@7.3.5(@types/node@24.13.6))(typescript@7.0.2)
+        version: 8.0.2(@astrojs/markdown-satteri@0.4.2)(astro@7.3.5(@types/node@24.13.6))
       astro:
         specifier: latest
         version: 7.3.5(@types/node@24.13.6)
-      sharp:
-        specifier: ^0.35.4
-        version: 0.35.4(@types/node@24.13.6)
       typescript:
         specifier: latest
         version: 7.0.2

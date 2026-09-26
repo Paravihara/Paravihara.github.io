@@ -1,0 +1,24 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../../layouts/Base.astro';
+import { excerpt, isEnglishPost, isPostId, postPath, postTags, readTime, sortPosts } from '../../../utils/posts';
+
+export async function getStaticPaths() {
+  const posts = (await getCollection('posts')).filter((post) => isPostId(post.id) && isEnglishPost(post.id) && !post.data.draft);
+  const tags = [...new Set(posts.flatMap((post) => postTags(post)))];
+  return tags.map((tag) => ({ params: { tag }, props: { tag } }));
+}
+
+const { tag } = Astro.props;
+const posts = sortPosts((await getCollection('posts')).filter((post) => isPostId(post.id) && isEnglishPost(post.id) && !post.data.draft && postTags(post).includes(tag)));
+---
+
+<Base active="tags" title={`#${tag} | Paravihara`}>
+  <section class="feed" aria-labelledby="feed-title">
+    <p class="feed-kicker">Tags</p>
+    <h1 id="feed-title">#{tag}</h1>
+    <div class="post-list">
+      {posts.map((post) => <article class="post-card"><a class="post-card__title" href={postPath(post.id, true)}>{post.data.title}</a><p class="post-card__meta">{post.data.published?.toLocaleDateString('en-US')} · {readTime(post.body ?? '', true)} min</p><p class="post-card__excerpt">{post.data.description ?? excerpt(post.body ?? '')}</p></article>)}
+    </div>
+  </section>
+</Base>

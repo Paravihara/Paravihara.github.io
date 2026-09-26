@@ -1,0 +1,46 @@
+---
+import Base from './Base.astro';
+
+interface Props {
+  description?: string;
+  title: string;
+  published?: Date;
+  updated?: Date;
+  readTime?: number;
+  tags?: string[];
+  toc?: { depth: number; label: string; id: string }[];
+}
+
+const { title, description, published, updated, readTime, tags = [], toc = [] } = Astro.props;
+const isEnglish = Astro.url.pathname === '/en' || Astro.url.pathname.startsWith('/en/');
+const formatDate = (date?: Date) => date ? date.toISOString().slice(0, 10) : '';
+---
+
+<Base title={title} description={description}>
+  <article class="post-page">
+    <header class="post-page__header">
+      <button id="back-button" class="back-button" type="button" aria-label={isEnglish ? 'Go back' : '返回'} data-back-button data-back-fallback={isEnglish ? '/en/' : '/'}>
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m14 5-7 7 7 7" /></svg>
+      </button>
+      <h1>{title}</h1>
+      <p class="post-page__eyebrow"><time datetime={published?.toISOString()}>{formatDate(published)}</time>{updated ? ` ${isEnglish ? 'updated' : '更新'} ${formatDate(updated)}` : ''}{readTime ? ` ${readTime} min` : ''}</p>
+    </header>
+    {toc.length > 0 && <details class="post-toc">
+      <summary>{isEnglish ? 'Contents' : '目录'}</summary>
+      <ol>
+        {toc.map((item) => <li class={`toc-depth-${item.depth}`}><a href={`#${item.id}`}>{item.label}</a></li>)}
+      </ol>
+    </details>}
+    <div class="reading-article__body"><slot /></div>
+    {tags.length > 0 && <footer class="post-page__footer post-tags">{tags.map((tag) => <a href={`${isEnglish ? '/en' : ''}/tags/${encodeURIComponent(tag)}/`}>{tag}</a>)}</footer>}
+  </article>
+</Base>
+
+<script is:inline>
+  document.addEventListener('click', (event) => {
+    const button = event.target.closest('[data-back-button]');
+    if (!button) return;
+    if (window.history.length > 1) window.history.back();
+    else window.location.assign(button.dataset.backFallback);
+  });
+</script>

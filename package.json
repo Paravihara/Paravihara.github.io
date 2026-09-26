@@ -9,9 +9,8 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "@astrojs/starlight": "latest",
+    "@astrojs/mdx": "latest",
     "astro": "latest",
-    "sharp": "^0.35.4",
     "typescript": "latest"
   }
 }
