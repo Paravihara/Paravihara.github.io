@@ -146,7 +146,7 @@ def write_index(paragraphs, document, image_map, output_path: Path) -> None:
         "7. [Dependent Origination, the Third Crisis of Mathematics and Parinibbāna](./07-dependent-origination-the-third-crisis-of-mathematics-and-parinibbana/)",
         "8. [Appendix](./appendix/)",
         "",
-        "The Chinese material remains available through the [中文专题入口](/talks/dong-xi-zhi/). The English manuscript follows the structure of the complete book supplied for this edition.",
+        "The Chinese material remains available through the [Chinese edition](/cn/heading-west-reaching-east/). The English manuscript follows the structure of the complete book supplied for this edition.",
     ]
     frontmatter = """---
 title: Heading West Reaching East
@@ -187,7 +187,7 @@ def main() -> None:
 
     document = Document(args.source)
     paragraphs = document.paragraphs
-    output_dir = args.repo / "src/content/docs/en/talks/dong-xi-zhi"
+    output_dir = args.repo / "src/content/docs/en/heading-west-reaching-east"
     image_dir = args.repo / "public/images/heading-west-reaching-east"
     output_dir.mkdir(parents=True, exist_ok=True)
     image_map = extract_images(document, image_dir)

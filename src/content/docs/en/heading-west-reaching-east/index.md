@@ -36,4 +36,4 @@ Feb. 1st, 2026
 7. [Dependent Origination, the Third Crisis of Mathematics and Parinibbāna](./07-dependent-origination-the-third-crisis-of-mathematics-and-parinibbana/)
 8. [Appendix](./appendix/)
 
-The Chinese material remains available through the [中文专题入口](/talks/dong-xi-zhi/). The English manuscript follows the structure of the complete book supplied for this edition.
+The Chinese material remains available through the [Chinese edition](/cn/heading-west-reaching-east/). The English manuscript follows the structure of the complete book supplied for this edition.

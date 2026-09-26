@@ -229,7 +229,11 @@
   transform: translateX(0.2rem);
 }
 
-html[lang='en'] .zh-only {
+html[lang='en'] .cn-only {
+  display: none;
+}
+
+html[lang^='zh'] .en-only {
   display: none;
 }
 
