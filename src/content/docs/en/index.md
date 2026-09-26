@@ -30,3 +30,9 @@ Use the language picker in the header to switch between 中文 and English. The 
 - [Teachings](/en/talks/): talks arranged by series and chapter.
 - [Scriptures](/en/sutras/): read translations with optional source text and notes.
 - [Concepts](/en/concepts/): follow a term into related passages and teachings.
+
+## Heading West Reaching East
+
+This sixteen-part series moves between modern science, cognition, complex systems, and Buddhist insight. Its Chinese essays are arranged as individual pages so readers can follow the argument slowly and return to earlier concepts when needed.
+
+[Open the series overview](/en/talks/dong-xi-zhi/)

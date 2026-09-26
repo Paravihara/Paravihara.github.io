@@ -32,9 +32,10 @@ export default defineConfig({
             { label: '导师开示', slug: 'talks' },
             {
               label: '东辕西辙',
+              translations: { en: 'Heading West Reaching East' },
               collapsed: true,
               items: [
-                { label: '系列首页', slug: 'talks/dong-xi-zhi' },
+                { label: '系列首页', translations: { en: 'Series overview' }, slug: 'talks/dong-xi-zhi' },
                 { label: '01 · 人工智能与上帝之手', slug: 'talks/dong-xi-zhi/01-artificial-intelligence-and-the-hand-of-god' },
                 { label: '02 · 关于一个现实的创造', slug: 'talks/dong-xi-zhi/02-creating-a-reality' },
                 { label: '03 · 道德伦理与二阶控制论（中译）', slug: 'talks/dong-xi-zhi/03-ethics-and-second-order-cybernetics' },
