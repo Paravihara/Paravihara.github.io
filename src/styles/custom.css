@@ -1,0 +1,104 @@
+:root {
+  --sl-color-accent-low: #dceee6;
+  --sl-color-accent: #3f8f78;
+  --sl-color-accent-high: #1f5d4c;
+  --sl-color-white: #fbfaf5;
+  --sl-color-gray-1: #eef3ed;
+  --sl-color-gray-2: #d8e2db;
+  --sl-color-gray-3: #aabbb1;
+  --sl-color-gray-4: #60756b;
+  --sl-color-gray-5: #3d5148;
+  --sl-color-gray-6: #25372f;
+  --sl-color-black: #16241f;
+  --sl-font: "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
+  --sl-font-system: "Noto Sans SC", "Microsoft YaHei", sans-serif;
+}
+
+:root[data-theme='light'] {
+  --sl-color-bg: #f4f6ef;
+  --sl-color-bg-nav: #e8f0e8;
+  --sl-color-bg-sidebar: #edf3ed;
+  --sl-color-hairline-light: #cbdacf;
+}
+
+:root[data-theme='dark'] {
+  --sl-color-accent-low: #1e4037;
+  --sl-color-accent: #79c4a9;
+  --sl-color-accent-high: #d8f0e4;
+  --sl-color-white: #edf4ee;
+  --sl-color-gray-1: #d9e4dc;
+  --sl-color-gray-2: #b7c8bd;
+  --sl-color-gray-3: #84998d;
+  --sl-color-gray-4: #5b7166;
+  --sl-color-gray-5: #3d5148;
+  --sl-color-gray-6: #26372f;
+  --sl-color-black: #18231e;
+  --sl-color-bg: #18231e;
+  --sl-color-bg-nav: #1d2e26;
+  --sl-color-bg-sidebar: #1b2a23;
+  --sl-color-hairline-light: #365044;
+}
+
+:root {
+  --sl-text-4xl: 2.75rem;
+  --sl-text-3xl: 2.1rem;
+  --sl-text-2xl: 1.6rem;
+  --sl-text-lg: 1.15rem;
+  --sl-content-width: 56rem;
+}
+
+.sl-markdown-content {
+  font-size: 1.08rem;
+  line-height: 2;
+  letter-spacing: 0.01em;
+}
+
+.sl-markdown-content p {
+  margin-block: 1.2em;
+}
+
+.sl-markdown-content h2,
+.sl-markdown-content h3 {
+  color: var(--sl-color-accent-high);
+  letter-spacing: 0.02em;
+}
+
+.sl-markdown-content blockquote {
+  border-inline-start-color: var(--sl-color-accent);
+  background: color-mix(in srgb, var(--sl-color-accent-low) 42%, transparent);
+  padding: 0.8rem 1.2rem;
+}
+
+.sl-markdown-content a {
+  text-decoration-color: color-mix(in srgb, var(--sl-color-accent) 45%, transparent);
+  text-underline-offset: 0.18em;
+}
+
+.reading-note {
+  border: 1px solid var(--sl-color-gray-2);
+  border-radius: 0.35rem;
+  background: color-mix(in srgb, var(--sl-color-bg-nav) 65%, transparent);
+  padding: 1rem 1.2rem;
+  margin: 1.5rem 0;
+}
+
+.reading-note strong {
+  color: var(--sl-color-accent-high);
+}
+
+.term {
+  border-bottom: 1px dotted var(--sl-color-accent);
+  color: var(--sl-color-accent-high);
+  cursor: help;
+}
+
+.sutra-segment {
+  border-inline-start: 2px solid var(--sl-color-accent);
+  padding-inline-start: 1rem;
+  margin-block: 1.25rem;
+}
+
+.sutra-segment small {
+  color: var(--sl-color-gray-4);
+  font-family: var(--sl-font-system);
+}

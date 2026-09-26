@@ -1,0 +1,21 @@
+{
+  "search.label": "Search",
+  "search.cancelLabel": "Cancel",
+  "languageSelect.accessibleLabel": "Select language",
+  "themeSelect.accessibleLabel": "Select theme",
+  "themeSelect.dark": "Dark",
+  "themeSelect.light": "Light",
+  "themeSelect.auto": "Auto",
+  "menuButton.accessibleLabel": "Open menu",
+  "sidebarNav.accessibleLabel": "Section navigation",
+  "tableOfContents.onThisPage": "On this page",
+  "tableOfContents.overview": "Overview",
+  "page.previousLink": "Previous page",
+  "page.nextLink": "Next page",
+  "i18n.untranslatedContent": "This page has not been translated yet. Showing the default language.",
+  "aside.tip": "Tip",
+  "aside.note": "Note",
+  "aside.caution": "Caution",
+  "aside.danger": "Warning",
+  "heading.anchorLabel": "Direct link to this section"
+}
