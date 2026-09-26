@@ -7,6 +7,7 @@ export default defineConfig({
     starlight({
       title: 'Paravihara',
       description: '在经文、开示与观照之间安住。',
+      favicon: '/favicon.jpg',
       logo: {
         src: './src/assets/logo.jpg',
         alt: 'Paravihara 菩提树标志',
