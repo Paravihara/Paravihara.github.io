@@ -35,34 +35,33 @@
 }
 
 :root {
-  --paper: rgb(255 255 255);
-  --ink: rgb(46 64 91);
-  --muted: rgb(46 64 91 / .82);
-  --faint: rgb(46 64 91 / .6);
-  --line: rgb(46 64 91 / .28);
-  --highlight: rgb(46 64 91);
-  --grid: rgb(46 64 91 / .1);
+  --paper: rgb(242 243 241);
+  --ink: rgb(48 67 54);
+  --muted: rgb(48 67 54 / .84);
+  --faint: rgb(48 67 54 / .62);
+  --line: rgb(48 67 54 / .28);
+  --highlight: rgb(104 142 113);
+  --accent: rgb(104 142 113);
   --serif: STIX, 'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', Georgia, serif;
   --title: 'Snell-Black', 'EarlySummer-Subset', 'EarlySummer', ui-serif, Georgia, serif;
-  --time: 'Snell-Bold', ui-serif, Georgia, serif;
+  --time: Cambria, 'Times New Roman', 'Snell-Bold', ui-serif, Georgia, serif;
+  --latin: Cambria, 'Times New Roman', serif;
   --sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
 }
 
 :root[data-theme='dark'] {
-  --paper: rgb(35 34 34);
-  --ink: rgb(255 255 255);
-  --muted: rgb(255 255 255 / .82);
-  --faint: rgb(255 255 255 / .62);
-  --line: rgb(255 255 255 / .28);
-  --highlight: rgb(255 255 255);
-  --grid: rgb(255 255 255 / .06);
+  --paper: rgb(43 47 44);
+  --ink: rgb(241 244 241);
+  --muted: rgb(241 244 241 / .84);
+  --faint: rgb(241 244 241 / .62);
+  --line: rgb(241 244 241 / .28);
+  --highlight: rgb(139 177 148);
+  --accent: rgb(124 164 135);
 }
 
 * { box-sizing: border-box; }
 html {
   background-color: var(--paper);
-  background-image: linear-gradient(to right, var(--grid) 1px, transparent 1px), linear-gradient(to bottom, var(--grid) 1px, transparent 1px);
-  background-size: 7px 7px;
   color-scheme: light;
 }
 html[data-theme='dark'] { color-scheme: dark; }
@@ -101,8 +100,8 @@ button { font: inherit; }
 .site-mark {
   position: relative;
   display: grid;
-  width: 7rem;
-  height: 7rem;
+  width: 8rem;
+  height: 8rem;
   margin: 0 auto 1rem;
   place-items: center;
   isolation: isolate;
@@ -111,16 +110,11 @@ button { font: inherit; }
   text-decoration: none;
   cursor: pointer;
 }
-.site-mark::before {
-  content: none;
-}
-.site-mark img { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: contain; transition: filter .9s ease, opacity .9s ease; }
-.site-mark__base { position: relative !important; z-index: 1; }
-.site-mark__tree { position: absolute; inset: 0; z-index: 2; overflow: hidden; opacity: 0; clip-path: inset(0 0 34% 0); transition: opacity .9s ease; }
-.site-mark__tree img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; -webkit-mask-image: radial-gradient(circle at 50% 66%, rgb(0 0 0 / 1) 0, rgb(0 0 0 / .9) 24%, rgb(0 0 0 / .3) 78%, rgb(0 0 0 / .16) 100%); mask-image: radial-gradient(circle at 50% 66%, rgb(0 0 0 / 1) 0, rgb(0 0 0 / .9) 24%, rgb(0 0 0 / .3) 78%, rgb(0 0 0 / .16) 100%); -webkit-mask-position: 50% 66%; mask-position: 50% 66%; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; -webkit-mask-size: 0% 0%; mask-size: 0% 0%; }
-.site-brand.is-awakened .site-mark__base { filter: brightness(0) invert(1); }
-.site-brand.is-awakened .site-mark__tree { opacity: 1; }
-.site-brand.is-awakened .site-mark__tree img { animation: tree-awaken .9s cubic-bezier(.2,.75,.25,1) both; }
+.site-mark img { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: contain; }
+.site-mark__base { z-index: 1; opacity: 1; transition: opacity .8s ease-in-out, transform .8s cubic-bezier(.2,.75,.25,1); }
+.site-mark__circle { z-index: 2; opacity: 0; clip-path: circle(0% at 50% 50%); transform: scale(.84); transition: opacity .8s ease-in-out; }
+.site-brand.is-awakened .site-mark__base { opacity: 0; transform: scale(.94); }
+.site-brand.is-awakened .site-mark__circle { animation: logo-circle-reveal .8s cubic-bezier(.2,.75,.25,1) both; }
 .site-title {
   display: inline-flex;
   flex-direction: column;
@@ -137,17 +131,17 @@ button { font: inherit; }
   transition: background-color .8s ease-in-out, color .8s ease-in-out, padding .8s ease-in-out, transform .8s ease-in-out;
   writing-mode: vertical-rl;
 }
-.site-title__latin { font-family: var(--sans); font-size: 1.12rem; letter-spacing: .04em; }
+.site-title__latin { font-family: var(--latin); font-size: 1.12rem; letter-spacing: .04em; }
 .site-title__cjk { font-size: 2rem; letter-spacing: .08em; }
 .site-title:hover, .site-title:focus-visible {
-  background: var(--ink);
+  background: var(--accent);
   color: var(--paper);
   padding-top: .9375rem;
   padding-bottom: 2.1875rem;
   transform: translateY(.15rem);
 }
 .site-brand.is-awakened .site-title {
-  background: var(--ink);
+  background: var(--accent);
   color: var(--paper);
   padding-top: .9375rem;
   padding-bottom: 2.1875rem;
@@ -246,18 +240,26 @@ button { font: inherit; }
   to { opacity: 1; transform: translateX(0); }
 }
 
-@keyframes tree-awaken {
-  0% { -webkit-mask-size: 0% 0%; mask-size: 0% 0%; }
-  55% { -webkit-mask-size: 82% 82%; mask-size: 82% 82%; }
-  100% { -webkit-mask-size: 175% 175%; mask-size: 175% 175%; }
+@keyframes logo-circle-reveal {
+  0% { opacity: 0; clip-path: circle(0% at 50% 50%); transform: scale(.84); }
+  58% { opacity: 1; clip-path: circle(68% at 50% 50%); transform: scale(1.03); }
+  100% { opacity: 1; clip-path: circle(72% at 50% 50%); transform: scale(1); }
 }
+
+html[lang='en'] body {
+  --sans: var(--latin);
+  --serif: var(--latin);
+  --time: var(--latin);
+  font-family: var(--latin);
+}
+html[lang='en'] body { font-variant-numeric: lining-nums proportional-nums; }
 
 @media (max-width: 63.99rem) {
   .site-main { width: auto; max-width: none; margin: 0 1.5rem; padding: 2rem 0 2.5rem; }
   .site-aside { position: static; width: auto; margin: 0 1.5rem; padding: 1.5rem 0 2rem; }
   .site-aside__intro { margin-bottom: 1.25rem; }
   .site-brand { width: 100%; align-items: center; }
-  .site-mark { width: 5.5rem; height: 5.5rem; margin-bottom: .7rem; }
+  .site-mark { width: 6.2rem; height: 6.2rem; margin-bottom: .7rem; }
   .site-brand.is-awakened .site-title { padding: .25rem .4rem; transform: translateY(.15rem); }
   .site-title { flex-direction: row; align-items: baseline; border-left: 0; padding: 0; font-size: 1.1rem; writing-mode: horizontal-tb; }
   .site-title__latin { font-size: 1rem; }

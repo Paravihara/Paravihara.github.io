@@ -36,6 +36,7 @@ const nav = isEnglish
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     {description && <meta name="description" content={description} />}
+    <link rel="icon" type="image/png" href="/favicon.png" />
     <title>{title && title !== siteName ? `${title} | ${siteName}` : siteName}</title>
     <ClientRouter />
     <script is:inline>
@@ -51,7 +52,7 @@ const nav = isEnglish
           <div class="site-brand" data-brand-toggle>
             <a class="site-mark" href={root || '/'} aria-label="Paravihara 标志">
               <img class="site-mark__base" src="/images/paravihara-mark.png" alt="" width="720" height="720" />
-              <span class="site-mark__tree" aria-hidden="true"><img src="/images/paravihara-mark.png" alt="" width="720" height="720" /></span>
+              <img class="site-mark__circle" src="/images/paravihara-circle.png" alt="" width="768" height="768" aria-hidden="true" />
             </a>
             <a id="site-title-link" class="site-title" href={root || '/'} aria-label="彼岸精舍 Paravihara" data-brand-toggle>
               <span class="site-title__latin">Paravihara</span>
