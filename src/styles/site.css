@@ -302,8 +302,9 @@ html[lang='en'] body { font-variant-numeric: lining-nums proportional-nums; }
   .site-brand.is-awakened .site-title { padding: .25rem .4rem; transform: translateY(.15rem); }
   .site-brand.is-pull-preview .site-title { padding: .25rem .4rem; transform: translateY(.15rem); }
   .site-title { flex-direction: row; align-items: baseline; border-left: 0; padding: 0; font-size: 1.1rem; writing-mode: horizontal-tb; }
-  .site-title__latin { font-size: 1rem; }
-  .site-title__cjk { font-size: 1.85rem; }
+  .site-title__cjk { order: 1; font-size: 1.35rem; }
+  .site-title__cjk::after { display: inline-block; margin-inline: .45rem; color: var(--faint); content: '|'; font-family: var(--latin); font-size: 1.35rem; font-weight: 500; }
+  .site-title__latin { order: 2; font-size: 1.35rem; }
   .site-title:focus-visible { padding: 0 .25rem; transform: none; }
   .site-nav { flex-direction: row; justify-content: center; gap: 1.25rem; }
   .site-aside__bottom { position: static; width: 100%; margin-top: 0; }
