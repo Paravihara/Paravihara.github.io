@@ -109,12 +109,13 @@ const nav = isEnglish
       let pullTriggered = false;
       let pullAddedAwakened = false;
       let touchStartedAwakened = false;
-      const touchBrand = document.querySelector('[data-brand-toggle].site-brand');
-      const homeUrl = document.documentElement.lang === 'en' ? '/en/' : '/';
+      let touchBrand = null;
+      const getHomeUrl = () => document.documentElement.lang === 'en' ? '/en/' : '/';
       const supportsTouchPull = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
 
-      if (supportsTouchPull && touchBrand) {
+      if (supportsTouchPull) {
         const resetPullProgress = () => {
+          if (!touchBrand) return;
           touchBrand.style.removeProperty('--pull-progress');
           touchBrand.style.removeProperty('--pull-percent');
           touchBrand.style.removeProperty('--pull-radius');
@@ -122,7 +123,9 @@ const nav = isEnglish
         };
 
         document.addEventListener('touchstart', (event) => {
-          if (window.scrollY <= 0 && event.touches.length === 1) {
+          const currentBrand = document.querySelector('[data-brand-toggle].site-brand');
+          if (window.scrollY <= 0 && event.touches.length === 1 && currentBrand) {
+            touchBrand = currentBrand;
             pullStartY = event.touches[0].clientY;
             pullPreview = false;
             pullTriggered = false;
@@ -155,13 +158,14 @@ const nav = isEnglish
 
         document.addEventListener('touchend', () => {
           const shouldNavigate = pullTriggered;
+          if (!touchBrand) return;
           touchBrand.classList.remove('is-pull-preview');
-          if (shouldNavigate && window.location.pathname === homeUrl && pullAddedAwakened) {
+          if (shouldNavigate && window.location.pathname === getHomeUrl() && pullAddedAwakened) {
             touchBrand.classList.remove('is-awakened');
           }
           pullStartY = null;
-          if (shouldNavigate && window.location.pathname !== homeUrl) {
-            window.location.assign(homeUrl);
+          if (shouldNavigate && window.location.pathname !== getHomeUrl()) {
+            window.location.assign(getHomeUrl());
           }
           resetPullProgress();
           pullPreview = false;
@@ -170,8 +174,9 @@ const nav = isEnglish
         }, { passive: true });
 
         document.addEventListener('touchcancel', () => {
+          if (!touchBrand) return;
           touchBrand.classList.remove('is-pull-preview');
-          if (pullAddedAwakened && window.location.pathname === homeUrl) {
+          if (pullAddedAwakened && window.location.pathname === getHomeUrl()) {
             touchBrand.classList.remove('is-awakened');
           }
           pullStartY = null;
