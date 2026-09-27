@@ -6,12 +6,14 @@ interface Props {
   description?: string;
   title?: string;
   active?: 'articles' | 'tags' | 'about';
+  annotatable?: boolean;
 }
 
 const {
   title,
   description,
   active = 'articles',
+  annotatable = false,
 } = Astro.props;
 const isEnglish = Astro.url.pathname === '/en' || Astro.url.pathname.startsWith('/en/');
 const siteName = isEnglish ? 'Pārāvihāra' : '彼岸精舍';
@@ -71,6 +73,13 @@ const nav = isEnglish
             <a class="icon-button contact-button" href="mailto:paravihara@outlook.com" aria-label={isEnglish ? 'Send email' : '发送邮件'} title={isEnglish ? 'Send email' : '发送邮件'}>
               <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="1.5"></rect><path d="m4 7 8 6 8-6"></path></svg>
             </a>
+            {annotatable && <button id="annotation-toggle-button" class="icon-button annotation-button" type="button" aria-label={isEnglish ? 'Open annotation tools' : '打开标注工具'} title={isEnglish ? 'Open annotation tools' : '打开标注工具'} data-annotation-toggle>
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m4 16 9.8-9.8 4 4L8 20H4v-4Z" />
+                <path d="m12.4 7.6 4 4" />
+                <path d="M14.8 18.5h5.2" />
+              </svg>
+            </button>}
             <button id="theme-toggle-button" class="icon-button" type="button" aria-label={isEnglish ? 'Toggle color theme' : '切换颜色主题'} data-theme-toggle>
               <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
                 <path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.64 5.64l1.42 1.42M16.94 16.94l1.42 1.42M5.64 18.36l1.42-1.42M16.94 7.06l1.42-1.42" />
@@ -101,6 +110,61 @@ const nav = isEnglish
         document.documentElement.dataset.theme = nextTheme;
         localStorage.setItem('paravihara-theme', nextTheme);
       });
+
+      const annotationScriptId = 'reviewjs-annotate-script';
+      const annotationScriptSrc = 'https://cdn.jsdelivr.net/npm/@reviewjs/annotate@1.2.0/annotate.js';
+
+      const openAnnotations = () => {
+        if (!document.querySelector('.reading-article__body')) return;
+        if (window.Annotate) {
+          window.Annotate.toggle();
+          return;
+        }
+
+        const activate = () => {
+          if (!window.Annotate) return;
+          window.Annotate.setTool('highlight');
+          window.Annotate.open();
+        };
+        let script = document.getElementById(annotationScriptId);
+        if (script) {
+          script.addEventListener('load', activate, { once: true });
+          return;
+        }
+
+        script = document.createElement('script');
+        script.id = annotationScriptId;
+        script.src = annotationScriptSrc;
+        script.defer = true;
+        script.dataset.project = 'paravihara';
+        script.dataset.page = window.location.pathname;
+        script.dataset.accent = 'var(--accent-strong)';
+        script.dataset.theme = 'auto';
+        script.dataset.position = 'bottom-right';
+        script.dataset.blocks = '.reading-article__body > *';
+        script.dataset.startOpen = 'false';
+        script.addEventListener('load', activate, { once: true });
+        document.body.appendChild(script);
+      };
+
+      document.addEventListener('click', (event) => {
+        const toggle = event.target.closest('[data-annotation-toggle]');
+        if (!toggle) return;
+        openAnnotations();
+      });
+
+      // reviewjs captures the page path when it first loads. Once it is active,
+      // use a full navigation between site pages so each article gets its own
+      // annotation namespace even though the site uses Astro client routing.
+      document.addEventListener('click', (event) => {
+        if (!window.Annotate) return;
+        const link = event.target.closest('a[href]');
+        if (!link || link.target === '_blank' || link.hasAttribute('download')) return;
+        const url = new URL(link.href, window.location.href);
+        if (url.origin !== window.location.origin || url.pathname === window.location.pathname) return;
+        event.preventDefault();
+        window.location.assign(url.href);
+      }, true);
 
       // On touch devices, a deliberate pull from the top previews the brand state
       // and returns to the current language's home page on release.

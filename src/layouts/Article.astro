@@ -16,7 +16,7 @@ const isEnglish = Astro.url.pathname === '/en' || Astro.url.pathname.startsWith(
 const formatDate = (date?: Date) => date ? date.toISOString().slice(0, 10) : '';
 ---
 
-<Base title={title} description={description}>
+<Base title={title} description={description} annotatable>
   <article class="post-page">
     <header class="post-page__header">
       <button id="back-button" class="back-button" type="button" aria-label={isEnglish ? 'Go back' : '返回'} data-back-button data-back-fallback={isEnglish ? '/en/' : '/'}>
