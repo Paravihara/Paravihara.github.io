@@ -103,7 +103,7 @@ const nav = isEnglish
       });
 
       // On touch devices, a deliberate pull from the top previews the brand state
-      // and returns to the current language's home page after the threshold.
+      // and returns to the current language's home page on release.
       let pullStartY = null;
       let pullPreview = false;
       let pullTriggered = false;
@@ -133,15 +133,16 @@ const nav = isEnglish
             pullTriggered = true;
             touchBrand.classList.remove('is-pull-preview');
             touchBrand.classList.add('is-awakened');
-            if (window.location.pathname !== homeUrl) {
-              window.setTimeout(() => window.location.assign(homeUrl), 620);
-            }
           }
         }, { passive: false });
 
         document.addEventListener('touchend', () => {
+          const shouldNavigate = pullTriggered;
           if (!pullTriggered) touchBrand.classList.remove('is-pull-preview');
           pullStartY = null;
+          if (shouldNavigate && window.location.pathname !== homeUrl) {
+            window.location.assign(homeUrl);
+          }
         }, { passive: true });
 
         document.addEventListener('touchcancel', () => {
