@@ -107,16 +107,28 @@ const nav = isEnglish
       let pullStartY = null;
       let pullPreview = false;
       let pullTriggered = false;
+      let pullAddedAwakened = false;
+      let touchStartedAwakened = false;
       const touchBrand = document.querySelector('[data-brand-toggle].site-brand');
       const homeUrl = document.documentElement.lang === 'en' ? '/en/' : '/';
       const supportsTouchPull = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
 
       if (supportsTouchPull && touchBrand) {
+        const resetPullProgress = () => {
+          touchBrand.style.removeProperty('--pull-progress');
+          touchBrand.style.removeProperty('--pull-percent');
+          touchBrand.style.removeProperty('--pull-radius');
+          touchBrand.style.removeProperty('--pull-scale');
+        };
+
         document.addEventListener('touchstart', (event) => {
           if (window.scrollY <= 0 && event.touches.length === 1) {
             pullStartY = event.touches[0].clientY;
             pullPreview = false;
             pullTriggered = false;
+            pullAddedAwakened = false;
+            touchStartedAwakened = touchBrand.classList.contains('is-awakened');
+            resetPullProgress();
           }
         }, { passive: true });
 
@@ -124,32 +136,49 @@ const nav = isEnglish
           if (pullStartY === null || pullTriggered || window.scrollY > 0 || event.touches.length !== 1) return;
           const distance = event.touches[0].clientY - pullStartY;
           if (distance <= 0) return;
-          if (!pullPreview && distance >= 24) {
+          const progress = Math.min(distance / 76, 1);
+          touchBrand.style.setProperty('--pull-progress', progress.toFixed(3));
+          touchBrand.style.setProperty('--pull-percent', `${Math.round(progress * 100)}%`);
+          touchBrand.style.setProperty('--pull-radius', `${Math.round(progress * 50)}%`);
+          touchBrand.style.setProperty('--pull-scale', (1 + progress * 0.3).toFixed(3));
+          if (!pullPreview && distance >= 8) {
             touchBrand.classList.add('is-pull-preview');
             pullPreview = true;
           }
           if (distance >= 76) {
             event.preventDefault();
             pullTriggered = true;
-            touchBrand.classList.remove('is-pull-preview');
             touchBrand.classList.add('is-awakened');
+            pullAddedAwakened = !touchStartedAwakened;
           }
         }, { passive: false });
 
         document.addEventListener('touchend', () => {
           const shouldNavigate = pullTriggered;
-          if (!pullTriggered) touchBrand.classList.remove('is-pull-preview');
+          touchBrand.classList.remove('is-pull-preview');
+          if (shouldNavigate && window.location.pathname === homeUrl && pullAddedAwakened) {
+            touchBrand.classList.remove('is-awakened');
+          }
           pullStartY = null;
           if (shouldNavigate && window.location.pathname !== homeUrl) {
             window.location.assign(homeUrl);
           }
+          resetPullProgress();
+          pullPreview = false;
+          pullTriggered = false;
+          pullAddedAwakened = false;
         }, { passive: true });
 
         document.addEventListener('touchcancel', () => {
           touchBrand.classList.remove('is-pull-preview');
+          if (pullAddedAwakened && window.location.pathname === homeUrl) {
+            touchBrand.classList.remove('is-awakened');
+          }
           pullStartY = null;
           pullPreview = false;
           pullTriggered = false;
+          pullAddedAwakened = false;
+          resetPullProgress();
         }, { passive: true });
       }
     </script>
