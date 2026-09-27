@@ -6,7 +6,7 @@ sidebar:
 ---
 # 荐书，顺便聊聊阿毗达摩对缘起法解读的一些微细偏差
 
-> 发布日期：2025-05-13　|　来源：彼岸精舍Paravihara（古道禅心）　|　[原文链接](http://mp.weixin.qq.com/s?__biz=MzI1NTAxMzIxOA==&mid=2247485347&idx=1&sn=6ba28351f830f97eeaa2a6edab63ed9e&chksm=ea3d3faedd4ab6b8181f2bc037fcdf0cb62ffdf6bacbc18adaac390b18c45c2754387324dfce#rd)
+> 发布日期：2025-05-13　|　来源：彼岸精舍Pārāvihāra（古道禅心）　|　[原文链接](http://mp.weixin.qq.com/s?__biz=MzI1NTAxMzIxOA==&mid=2247485347&idx=1&sn=6ba28351f830f97eeaa2a6edab63ed9e&chksm=ea3d3faedd4ab6b8181f2bc037fcdf0cb62ffdf6bacbc18adaac390b18c45c2754387324dfce#rd)
 
 ---
 

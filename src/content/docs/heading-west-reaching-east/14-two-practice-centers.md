@@ -6,7 +6,7 @@ sidebar:
 ---
 # 最后推荐两个实修道场
 
-> 发布日期：2024-04-10　|　来源：彼岸精舍Paravihara（古道禅心）　|　[原文链接](http://mp.weixin.qq.com/s?__biz=MzI1NTAxMzIxOA==&mid=2247485226&idx=1&sn=4c9ecf7ec175ced1d02deb144c7e9f72&chksm=ea3d3f27dd4ab631f33c1f796dd767393bae35af1c62781640f06d7ac119062de7b8784691c1#rd)
+> 发布日期：2024-04-10　|　来源：彼岸精舍Pārāvihāra（古道禅心）　|　[原文链接](http://mp.weixin.qq.com/s?__biz=MzI1NTAxMzIxOA==&mid=2247485226&idx=1&sn=4c9ecf7ec175ced1d02deb144c7e9f72&chksm=ea3d3f27dd4ab631f33c1f796dd767393bae35af1c62781640f06d7ac119062de7b8784691c1#rd)
 
 ---
 

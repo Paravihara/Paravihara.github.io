@@ -6,7 +6,7 @@ sidebar:
 ---
 # 控制论，缘起法与禅宗
 
-> 发布日期：2023-08-08　|　来源：彼岸精舍Paravihara（古道禅心）　|　[原文链接](http://mp.weixin.qq.com/s?__biz=MzI1NTAxMzIxOA==&mid=2247484649&idx=1&sn=c31142b4baaef82d344b85f5cba0f9fd&chksm=ea3d3ce4dd4ab5f2ebea81f9528bfb31f820126725683ee0bb887e56af8d56c9ad08188a42fa#rd)
+> 发布日期：2023-08-08　|　来源：彼岸精舍Pārāvihāra（古道禅心）　|　[原文链接](http://mp.weixin.qq.com/s?__biz=MzI1NTAxMzIxOA==&mid=2247484649&idx=1&sn=c31142b4baaef82d344b85f5cba0f9fd&chksm=ea3d3ce4dd4ab5f2ebea81f9528bfb31f820126725683ee0bb887e56af8d56c9ad08188a42fa#rd)
 
 ---
 

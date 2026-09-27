@@ -6,7 +6,7 @@ sidebar:
 ---
 # 人工智能的“三刃剑”
 
-> 发布日期：2023-11-22　|　来源：彼岸精舍Paravihara（古道禅心）　|　[原文链接](http://mp.weixin.qq.com/s?__biz=MzI1NTAxMzIxOA==&mid=2247484820&idx=1&sn=01f74d7895b547cf621b872dd5a57c21&chksm=ea3d3d99dd4ab48f3c8069a9b22c2891dd22e56ce63d4f59bb19dedfd82cc25012baa7f46bd5#rd)
+> 发布日期：2023-11-22　|　来源：彼岸精舍Pārāvihāra（古道禅心）　|　[原文链接](http://mp.weixin.qq.com/s?__biz=MzI1NTAxMzIxOA==&mid=2247484820&idx=1&sn=01f74d7895b547cf621b872dd5a57c21&chksm=ea3d3d99dd4ab48f3c8069a9b22c2891dd22e56ce63d4f59bb19dedfd82cc25012baa7f46bd5#rd)
 
 ---
 

@@ -6,7 +6,7 @@ sidebar:
 ---
 # 道德伦理与二阶控制论（中译）
 
-> 发布日期：2022-08-14　|　来源：彼岸精舍Paravihara（古道禅心）　|　[原文链接](http://mp.weixin.qq.com/s?__biz=MzI1NTAxMzIxOA==&mid=2247483830&idx=1&sn=5a6fbc9c95c6f24ff04ac1824a73e4d3&chksm=ea3d39bbdd4ab0adb6503a7bd84b231bb6198100d571bc373a1575f32008a0bdfe9a9e81ca2a#rd)
+> 发布日期：2022-08-14　|　来源：彼岸精舍Pārāvihāra（古道禅心）　|　[原文链接](http://mp.weixin.qq.com/s?__biz=MzI1NTAxMzIxOA==&mid=2247483830&idx=1&sn=5a6fbc9c95c6f24ff04ac1824a73e4d3&chksm=ea3d39bbdd4ab0adb6503a7bd84b231bb6198100d571bc373a1575f32008a0bdfe9a9e81ca2a#rd)
 
 ---
 

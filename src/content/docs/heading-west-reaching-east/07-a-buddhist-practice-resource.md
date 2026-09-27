@@ -6,7 +6,7 @@ sidebar:
 ---
 # 推荐一个佛法实修公众号
 
-> 发布日期：2023-08-10　|　来源：彼岸精舍Paravihara（古道禅心）　|　[原文链接](http://mp.weixin.qq.com/s?__biz=MzI1NTAxMzIxOA==&mid=2247484653&idx=1&sn=69c5b15fb414c5a53d0be1170cdc2ed9&chksm=ea3d3ce0dd4ab5f6bb5080159ed266c8da12a28bad06a88da8846b06688d5cafb62ab2302361#rd)
+> 发布日期：2023-08-10　|　来源：彼岸精舍Pārāvihāra（古道禅心）　|　[原文链接](http://mp.weixin.qq.com/s?__biz=MzI1NTAxMzIxOA==&mid=2247484653&idx=1&sn=69c5b15fb414c5a53d0be1170cdc2ed9&chksm=ea3d3ce0dd4ab5f6bb5080159ed266c8da12a28bad06a88da8846b06688d5cafb62ab2302361#rd)
 
 ---
 

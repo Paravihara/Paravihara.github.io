@@ -6,7 +6,7 @@ sidebar:
 ---
 # 关于一个现实的创造
 
-> 发布日期：2022-08-13　|　来源：彼岸精舍Paravihara（古道禅心）　|　[原文链接](http://mp.weixin.qq.com/s?__biz=MzI1NTAxMzIxOA==&mid=2247483829&idx=1&sn=7f0bb8df9164d183c30b8fe1c29588fb&chksm=ea3d39b8dd4ab0aea3ae597a2b0f5d481855c5d307dd82de308afbe5770b038d9d8ff4664dc3#rd)
+> 发布日期：2022-08-13　|　来源：彼岸精舍Pārāvihāra（古道禅心）　|　[原文链接](http://mp.weixin.qq.com/s?__biz=MzI1NTAxMzIxOA==&mid=2247483829&idx=1&sn=7f0bb8df9164d183c30b8fe1c29588fb&chksm=ea3d39b8dd4ab0aea3ae597a2b0f5d481855c5d307dd82de308afbe5770b038d9d8ff4664dc3#rd)
 
 ---
 

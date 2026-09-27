@@ -13,9 +13,9 @@ const { tag } = Astro.props;
 const posts = sortPosts((await getCollection('posts')).filter((post) => isPostId(post.id) && isEnglishPost(post.id) && !post.data.draft && postTags(post).includes(tag)));
 ---
 
-<Base active="tags" title={`#${tag} | Paravihara`}>
+<Base active="tags" title={`#${tag} | Pārāvihāra`}>
   <section class="feed" aria-labelledby="feed-title">
-    <p class="feed-kicker">Tags</p>
+    <p class="feed-kicker">Topics</p>
     <h1 id="feed-title">#{tag}</h1>
     <div class="post-list">
       {posts.map((post) => <article class="post-card"><a class="post-card__title" href={postPath(post.id, true)}>{post.data.title}</a><p class="post-card__meta">{post.data.published?.toLocaleDateString('en-US')} · {readTime(post.body ?? '', true)} min</p><p class="post-card__excerpt">{post.data.description ?? excerpt(post.body ?? '')}</p></article>)}

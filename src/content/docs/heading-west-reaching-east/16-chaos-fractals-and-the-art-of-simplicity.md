@@ -6,7 +6,7 @@ sidebar:
 ---
 # 混沌与分形：以简驽繁的艺术
 
-> 发布日期：2026-05-01　|　来源：彼岸精舍Paravihara（古道禅心）　|　[原文链接](http://mp.weixin.qq.com/s?__biz=MzI1NTAxMzIxOA==&mid=2247485467&idx=1&sn=b494b5591cd99ff80b787a7ca493f02f&chksm=ea3d3016dd4ab900dfbad4c2fb0a86a96ca37307223ecb7abc7f4bce49a30651f5c16386598d#rd)
+> 发布日期：2026-05-01　|　来源：彼岸精舍Pārāvihāra（古道禅心）　|　[原文链接](http://mp.weixin.qq.com/s?__biz=MzI1NTAxMzIxOA==&mid=2247485467&idx=1&sn=b494b5591cd99ff80b787a7ca493f02f&chksm=ea3d3016dd4ab900dfbad4c2fb0a86a96ca37307223ecb7abc7f4bce49a30651f5c16386598d#rd)
 
 ---
 

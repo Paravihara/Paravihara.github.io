@@ -14,19 +14,19 @@ const {
   active = 'articles',
 } = Astro.props;
 const isEnglish = Astro.url.pathname === '/en' || Astro.url.pathname.startsWith('/en/');
-const siteName = isEnglish ? 'Paravihara' : '彼岸精舍';
+const siteName = isEnglish ? 'Pārāvihāra' : '彼岸精舍';
 const root = isEnglish ? '/en' : '';
 const alternateLocale = isEnglish ? '/' : '/en/';
 const nav = isEnglish
   ? [
       { key: 'articles', label: 'Articles', href: `${root}/` },
-      { key: 'tags', label: 'Tags', href: `${root}/tags/` },
-      { key: 'about', label: 'About', href: `${root}/about/` },
+      { key: 'tags', label: 'Topics', href: `${root}/tags/` },
+      { key: 'about', label: 'Origin', href: `${root}/about/` },
     ]
   : [
       { key: 'articles', label: '文章', href: `${root}/` },
-      { key: 'tags', label: '标签', href: `${root}/tags/` },
-      { key: 'about', label: '关于', href: `${root}/about/` },
+      { key: 'tags', label: '专题', href: `${root}/tags/` },
+      { key: 'about', label: '缘起', href: `${root}/about/` },
     ];
 ---
 
@@ -50,12 +50,12 @@ const nav = isEnglish
       <aside class="site-aside">
         <div class="site-aside__intro">
           <div class="site-brand" data-brand-toggle>
-            <a class="site-mark" href={root || '/'} aria-label="Paravihara 标志">
+            <a class="site-mark" href={root || '/'} aria-label="Pārāvihāra 标志">
               <img class="site-mark__base" src="/images/paravihara-mark.png" alt="" width="720" height="720" />
-              <img class="site-mark__circle" src="/images/paravihara-circle.png" alt="" width="768" height="768" aria-hidden="true" />
+              <img class="site-mark__circle" src="/images/paravihara-mark.png" alt="" width="720" height="720" aria-hidden="true" />
             </a>
-            <a id="site-title-link" class="site-title" href={root || '/'} aria-label="彼岸精舍 Paravihara" data-brand-toggle>
-              <span class="site-title__latin">Paravihara</span>
+            <a id="site-title-link" class="site-title" href={root || '/'} aria-label="彼岸精舍 Pārāvihāra" data-brand-toggle>
+              <span class="site-title__latin">Pārāvihāra</span>
               <span class="site-title__cjk">彼岸精舍</span>
             </a>
           </div>
@@ -68,6 +68,9 @@ const nav = isEnglish
         <div class="site-aside__bottom">
           <div class="site-tools">
             <a id="language-switcher" class="locale-link" href={alternateLocale} aria-label={isEnglish ? 'Switch to Chinese' : '切换至英文'}>{isEnglish ? '中' : 'EN'}</a>
+            <a class="icon-button contact-button" href="mailto:paravihara@outlook.com" aria-label={isEnglish ? 'Send email' : '发送邮件'} title={isEnglish ? 'Send email' : '发送邮件'}>
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="1.5"></rect><path d="m4 7 8 6 8-6"></path></svg>
+            </a>
             <button id="theme-toggle-button" class="icon-button" type="button" aria-label={isEnglish ? 'Toggle color theme' : '切换颜色主题'} data-theme-toggle>
               <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
                 <path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.64 5.64l1.42 1.42M16.94 16.94l1.42 1.42M5.64 18.36l1.42-1.42M16.94 7.06l1.42-1.42" />
@@ -83,11 +86,12 @@ const nav = isEnglish
       document.addEventListener('click', (event) => {
         const trigger = event.target.closest('[data-brand-toggle]');
         if (!trigger) return;
-        event.preventDefault();
         const brand = document.querySelector('[data-brand-toggle].site-brand');
         if (!brand) return;
-        brand.classList.remove('is-awakened');
-        requestAnimationFrame(() => brand.classList.add('is-awakened'));
+        const supportsHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+        if (supportsHover) return;
+        event.preventDefault();
+        brand.classList.toggle('is-awakened');
       });
 
       document.addEventListener('click', (event) => {

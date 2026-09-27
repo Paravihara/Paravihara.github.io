@@ -6,7 +6,7 @@ sidebar:
 ---
 # 人工智能与上帝之手
 
-> 发布日期：2022-07-24　|　来源：彼岸精舍Paravihara（古道禅心）　|　[原文链接](http://mp.weixin.qq.com/s?__biz=MzI1NTAxMzIxOA==&mid=2247483666&idx=1&sn=7f2824e9bcdd9b324aa1460ce606fd25&chksm=ea3d391fdd4ab00988157aa53d74afe48462c59ef51809871cf52c3936094123b4f6b2ace584#rd)
+> 发布日期：2022-07-24　|　来源：彼岸精舍Pārāvihāra（古道禅心）　|　[原文链接](http://mp.weixin.qq.com/s?__biz=MzI1NTAxMzIxOA==&mid=2247483666&idx=1&sn=7f2824e9bcdd9b324aa1460ce606fd25&chksm=ea3d391fdd4ab00988157aa53d74afe48462c59ef51809871cf52c3936094123b4f6b2ace584#rd)
 
 ---
 

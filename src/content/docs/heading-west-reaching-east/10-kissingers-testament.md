@@ -6,7 +6,7 @@ sidebar:
 ---
 # 基辛格的“遗嘱”
 
-> 发布日期：2023-11-30　|　来源：彼岸精舍Paravihara（古道禅心）　|　[原文链接](http://mp.weixin.qq.com/s?__biz=MzI1NTAxMzIxOA==&mid=2247484881&idx=1&sn=f5c2a593c8361e45581960bc7d939fac&chksm=ea3d3ddcdd4ab4ca2053aef8a90e3d822e076bb4116c77c8aa782405cc1efffc3cc6322ca98c#rd)
+> 发布日期：2023-11-30　|　来源：彼岸精舍Pārāvihāra（古道禅心）　|　[原文链接](http://mp.weixin.qq.com/s?__biz=MzI1NTAxMzIxOA==&mid=2247484881&idx=1&sn=f5c2a593c8361e45581960bc7d939fac&chksm=ea3d3ddcdd4ab4ca2053aef8a90e3d822e076bb4116c77c8aa782405cc1efffc3cc6322ca98c#rd)
 
 ---
 

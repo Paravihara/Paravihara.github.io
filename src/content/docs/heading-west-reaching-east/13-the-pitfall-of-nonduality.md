@@ -6,7 +6,7 @@ sidebar:
 ---
 # 顶堕：无色界的不二迷思｜《一阴一阳之谓道》书摘点评
 
-> 发布日期：2024-04-06　|　来源：彼岸精舍Paravihara（古道禅心）　|　[原文链接](http://mp.weixin.qq.com/s?__biz=MzI1NTAxMzIxOA==&mid=2247485201&idx=1&sn=59d53204a4d07fb193439aa42652e815&chksm=ea3d3f1cdd4ab60af25b235ada73651cb788c16f1b12ba23f3f1ce09e3f44a692730f12780fc#rd)
+> 发布日期：2024-04-06　|　来源：彼岸精舍Pārāvihāra（古道禅心）　|　[原文链接](http://mp.weixin.qq.com/s?__biz=MzI1NTAxMzIxOA==&mid=2247485201&idx=1&sn=59d53204a4d07fb193439aa42652e815&chksm=ea3d3f1cdd4ab60af25b235ada73651cb788c16f1b12ba23f3f1ce09e3f44a692730f12780fc#rd)
 
 ---
 

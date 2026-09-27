@@ -6,7 +6,7 @@ sidebar:
 ---
 # 缘起法，第三次数学危机与无余涅盘
 
-> 发布日期：2024-03-31　|　来源：彼岸精舍Paravihara（古道禅心）　|　[原文链接](http://mp.weixin.qq.com/s?__biz=MzI1NTAxMzIxOA==&mid=2247485149&idx=1&sn=86fc7e3d1e73bbf50134baf812875f42&chksm=ea3d3ed0dd4ab7c6234dd8887a7559157c36e358c681fd24b1de9302f759bf58736b1703adc0#rd)
+> 发布日期：2024-03-31　|　来源：彼岸精舍Pārāvihāra（古道禅心）　|　[原文链接](http://mp.weixin.qq.com/s?__biz=MzI1NTAxMzIxOA==&mid=2247485149&idx=1&sn=86fc7e3d1e73bbf50134baf812875f42&chksm=ea3d3ed0dd4ab7c6234dd8887a7559157c36e358c681fd24b1de9302f759bf58736b1703adc0#rd)
 
 ---
 

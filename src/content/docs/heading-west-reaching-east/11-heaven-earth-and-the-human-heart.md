@@ -6,7 +6,7 @@ sidebar:
 ---
 # 天地与人心
 
-> 发布日期：2024-01-09　|　来源：彼岸精舍Paravihara（古道禅心）　|　[原文链接](http://mp.weixin.qq.com/s?__biz=MzI1NTAxMzIxOA==&mid=2247485055&idx=1&sn=42bba845a1e216637a8b3428d1a66b93&chksm=ea3d3e72dd4ab7648dc457873f58ee14d3738271ff4566c79c8f4fb3f4ecb779ae8f708b1126#rd)
+> 发布日期：2024-01-09　|　来源：彼岸精舍Pārāvihāra（古道禅心）　|　[原文链接](http://mp.weixin.qq.com/s?__biz=MzI1NTAxMzIxOA==&mid=2247485055&idx=1&sn=42bba845a1e216637a8b3428d1a66b93&chksm=ea3d3e72dd4ab7648dc457873f58ee14d3738271ff4566c79c8f4fb3f4ecb779ae8f708b1126#rd)
 
 ---
 

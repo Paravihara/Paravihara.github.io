@@ -6,7 +6,7 @@ sidebar:
 ---
 # 控制论，七识住与古印度世界模型
 
-> 发布日期：2023-08-04　|　来源：彼岸精舍Paravihara（古道禅心）　|　[原文链接](http://mp.weixin.qq.com/s?__biz=MzI1NTAxMzIxOA==&mid=2247484606&idx=1&sn=198f54400ed60ad2c8ceb87a0adb3fe4&chksm=ea3d3cb3dd4ab5a548af664abb6745308976f3b205151477b4bd6682dc2d9f86d1b2cc0dd65d#rd)
+> 发布日期：2023-08-04　|　来源：彼岸精舍Pārāvihāra（古道禅心）　|　[原文链接](http://mp.weixin.qq.com/s?__biz=MzI1NTAxMzIxOA==&mid=2247484606&idx=1&sn=198f54400ed60ad2c8ceb87a0adb3fe4&chksm=ea3d3cb3dd4ab5a548af664abb6745308976f3b205151477b4bd6682dc2d9f86d1b2cc0dd65d#rd)
 
 ---
 

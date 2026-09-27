@@ -12,7 +12,7 @@ export async function GET({ site }: { site: URL }) {
       <description><![CDATA[${post.data.description ?? ''}]]></description>
     </item>`).join('');
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
-  <rss version="2.0"><channel><title>Paravihara</title><link>${site}</link><description>文章、经文与开示</description>${items}
+  <rss version="2.0"><channel><title>Pārāvihāra</title><link>${site}</link><description>文章、经文与开示</description>${items}
   </channel></rss>`;
   return new Response(xml, { headers: { 'Content-Type': 'application/xml; charset=utf-8' } });
 }

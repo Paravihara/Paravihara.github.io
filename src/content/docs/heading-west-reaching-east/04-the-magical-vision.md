@@ -6,7 +6,7 @@ sidebar:
 ---
 # “魔幻”的视觉
 
-> 发布日期：2023-08-02　|　来源：彼岸精舍Paravihara（古道禅心）　|　[原文链接](http://mp.weixin.qq.com/s?__biz=MzI1NTAxMzIxOA==&mid=2247484596&idx=1&sn=3caeaa018cf4e6f64ee448dea5f348ca&chksm=ea3d3cb9dd4ab5aff719837d6cc9530334f5dc5bb271f015b1bf2c0552a77ae5878685069174#rd)
+> 发布日期：2023-08-02　|　来源：彼岸精舍Pārāvihāra（古道禅心）　|　[原文链接](http://mp.weixin.qq.com/s?__biz=MzI1NTAxMzIxOA==&mid=2247484596&idx=1&sn=3caeaa018cf4e6f64ee448dea5f348ca&chksm=ea3d3cb9dd4ab5aff719837d6cc9530334f5dc5bb271f015b1bf2c0552a77ae5878685069174#rd)
 
 ---
 

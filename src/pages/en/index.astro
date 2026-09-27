@@ -8,7 +8,7 @@ const formatDate = (date?: Date) => date ? date.toISOString().slice(0, 10) : 'Un
 const groups = Array.from({ length: Math.ceil(posts.length / 2) }, (_, index) => posts.slice(index * 2, index * 2 + 2));
 ---
 
-<Base title="Paravihara">
+<Base title="Pārāvihāra">
   <section class="feed" aria-label="Article list">
     {groups.map((group) => (
       <section class="post-group">
