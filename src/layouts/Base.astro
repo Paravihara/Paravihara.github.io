@@ -101,6 +101,56 @@ const nav = isEnglish
         document.documentElement.dataset.theme = nextTheme;
         localStorage.setItem('paravihara-theme', nextTheme);
       });
+
+      // On touch devices, a deliberate pull from the top previews the brand state
+      // and returns to the current language's home page after the threshold.
+      let pullStartY = null;
+      let pullPreview = false;
+      let pullTriggered = false;
+      const touchBrand = document.querySelector('[data-brand-toggle].site-brand');
+      const homeUrl = document.documentElement.lang === 'en' ? '/en/' : '/';
+      const supportsTouchPull = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
+
+      if (supportsTouchPull && touchBrand) {
+        document.addEventListener('touchstart', (event) => {
+          if (window.scrollY <= 0 && event.touches.length === 1) {
+            pullStartY = event.touches[0].clientY;
+            pullPreview = false;
+            pullTriggered = false;
+          }
+        }, { passive: true });
+
+        document.addEventListener('touchmove', (event) => {
+          if (pullStartY === null || pullTriggered || window.scrollY > 0 || event.touches.length !== 1) return;
+          const distance = event.touches[0].clientY - pullStartY;
+          if (distance <= 0) return;
+          if (!pullPreview && distance >= 24) {
+            touchBrand.classList.add('is-pull-preview');
+            pullPreview = true;
+          }
+          if (distance >= 76) {
+            event.preventDefault();
+            pullTriggered = true;
+            touchBrand.classList.remove('is-pull-preview');
+            touchBrand.classList.add('is-awakened');
+            if (window.location.pathname !== homeUrl) {
+              window.setTimeout(() => window.location.assign(homeUrl), 620);
+            }
+          }
+        }, { passive: false });
+
+        document.addEventListener('touchend', () => {
+          if (!pullTriggered) touchBrand.classList.remove('is-pull-preview');
+          pullStartY = null;
+        }, { passive: true });
+
+        document.addEventListener('touchcancel', () => {
+          touchBrand.classList.remove('is-pull-preview');
+          pullStartY = null;
+          pullPreview = false;
+          pullTriggered = false;
+        }, { passive: true });
+      }
     </script>
   </body>
 </html>

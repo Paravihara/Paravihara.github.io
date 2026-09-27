@@ -44,7 +44,7 @@
   --accent: rgb(147 154 136);
   --accent-strong: rgb(91 111 87);
   --accent-foreground: rgb(42 57 45);
-  --highlight: var(--accent-strong);
+  --highlight: rgb(207 216 204);
   --serif: STIX, 'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', Georgia, serif;
   --title: 'Snell-Black', 'EarlySummer-Subset', 'EarlySummer', ui-serif, Georgia, serif;
   --time: Cambria, 'Times New Roman', 'Snell-Bold', ui-serif, Georgia, serif;
@@ -61,7 +61,7 @@
   --accent: rgb(147 154 136);
   --accent-strong: rgb(180 194 169);
   --accent-foreground: rgb(36 48 39);
-  --highlight: var(--accent-strong);
+  --highlight: rgb(95 113 91);
 }
 
 * { box-sizing: border-box; }
@@ -97,7 +97,7 @@ button { font: inherit; }
   position: fixed;
   top: 5rem;
   right: max(5rem, calc(50vw - 35rem));
-  width: 14rem;
+  width: 16rem;
   z-index: 10;
 }
 .site-aside__intro { width: 100%; margin-bottom: 2.25rem; animation: fade-in-left 1s ease-out both; }
@@ -105,8 +105,8 @@ button { font: inherit; }
 .site-mark {
   position: relative;
   display: grid;
-  width: 8rem;
-  height: 8rem;
+  width: 16rem;
+  height: 16rem;
   margin: 0 auto 1rem;
   place-items: center;
   isolation: isolate;
@@ -133,6 +133,9 @@ button { font: inherit; }
 .site-brand.is-awakened .site-mark::before { opacity: 1; clip-path: circle(50% at 50% 50%); }
 .site-brand.is-awakened .site-mark__base { opacity: 0; }
 .site-brand.is-awakened .site-mark__circle { opacity: 1; clip-path: circle(50% at 50% 50%); }
+.site-brand.is-pull-preview .site-mark::before { opacity: 1; clip-path: circle(50% at 50% 50%); }
+.site-brand.is-pull-preview .site-mark__base { opacity: 0; }
+.site-brand.is-pull-preview .site-mark__circle { opacity: 1; clip-path: circle(50% at 50% 50%); }
 .site-title {
   display: inline-flex;
   flex-direction: column;
@@ -152,6 +155,15 @@ button { font: inherit; }
 .site-title__latin { font-family: var(--latin); font-size: 1.12rem; letter-spacing: .04em; }
 .site-title__cjk { font-size: 2rem; letter-spacing: .08em; }
 .site-brand.is-awakened .site-title {
+  background: var(--accent);
+  color: var(--accent-foreground);
+  padding-top: .9375rem;
+  padding-bottom: 2.1875rem;
+  transform: translateY(.15rem);
+  border-radius: .5rem;
+  box-shadow: 0 .35rem .8rem rgb(42 57 45 / .18), inset 0 1px 0 rgb(255 255 255 / .35);
+}
+.site-brand.is-pull-preview .site-title {
   background: var(--accent);
   color: var(--accent-foreground);
   padding-top: .9375rem;
@@ -197,7 +209,7 @@ button { font: inherit; }
 .site-nav a::after { position: absolute; z-index: -1; right: -.15em; bottom: .05em; left: -.15em; height: .42em; background: transparent; content: ''; }
 .site-nav a:hover, .site-nav a:focus-visible, .site-nav a.active { color: var(--ink); font-weight: 700; }
 .site-nav a.active::after { background: var(--accent-strong); }
-.site-aside__bottom { position: fixed; right: max(5rem, calc(50vw - 35rem)); bottom: 1.25rem; width: 14rem; }
+.site-aside__bottom { position: fixed; right: max(5rem, calc(50vw - 35rem)); bottom: 1.25rem; width: 16rem; }
 .site-tools { display: grid; width: 100%; grid-template-columns: repeat(3, 2rem); align-items: center; justify-content: center; gap: .7rem; margin-bottom: 1.5rem; }
 .locale-link { display: grid; width: 2rem; height: 2rem; place-items: center; color: var(--muted); font-family: var(--serif); font-size: .95rem; text-decoration: none; }
 .locale-link:hover, .locale-link:focus-visible { color: var(--ink); }
@@ -286,8 +298,9 @@ html[lang='en'] body { font-variant-numeric: lining-nums proportional-nums; }
   .site-aside { position: static; display: grid; width: auto; margin: 0 1.5rem; padding: 1.5rem 0 2rem; justify-items: center; row-gap: 1.4rem; }
   .site-aside__intro { margin-bottom: 0; }
   .site-brand { width: 100%; align-items: center; }
-  .site-mark { width: 6.2rem; height: 6.2rem; margin-bottom: .7rem; }
+  .site-mark { width: 12.4rem; height: 12.4rem; margin-bottom: .7rem; }
   .site-brand.is-awakened .site-title { padding: .25rem .4rem; transform: translateY(.15rem); }
+  .site-brand.is-pull-preview .site-title { padding: .25rem .4rem; transform: translateY(.15rem); }
   .site-title { flex-direction: row; align-items: baseline; border-left: 0; padding: 0; font-size: 1.1rem; writing-mode: horizontal-tb; }
   .site-title__latin { font-size: 1rem; }
   .site-title__cjk { font-size: 1.85rem; }
