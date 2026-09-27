@@ -46,13 +46,18 @@ const nav = isEnglish
   </head>
   <body>
     <div class="site-shell">
-      <main class="site-main"><slot /></main>
       <aside class="site-aside">
         <div class="site-aside__intro">
-          <a id="site-title-link" class="site-title" href={root || '/'} aria-label="彼岸精舍 Paravihara">
-            <span class="site-title__latin">Paravihara</span>
-            <span class="site-title__cjk">彼岸精舍</span>
-          </a>
+          <div class="site-brand" data-brand-toggle>
+            <a class="site-mark" href={root || '/'} aria-label="Paravihara 标志">
+              <img class="site-mark__base" src="/images/paravihara-mark.png" alt="" width="720" height="720" />
+              <span class="site-mark__tree" aria-hidden="true"><img src="/images/paravihara-mark.png" alt="" width="720" height="720" /></span>
+            </a>
+            <a id="site-title-link" class="site-title" href={root || '/'} aria-label="彼岸精舍 Paravihara" data-brand-toggle>
+              <span class="site-title__latin">Paravihara</span>
+              <span class="site-title__cjk">彼岸精舍</span>
+            </a>
+          </div>
         </div>
         <nav class="site-nav" aria-label={isEnglish ? 'Site navigation' : '站点导航'}>
           {nav.map((item) => (
@@ -71,8 +76,19 @@ const nav = isEnglish
           </div>
         </div>
       </aside>
+      <main class="site-main"><slot /></main>
     </div>
     <script is:inline>
+      document.addEventListener('click', (event) => {
+        const trigger = event.target.closest('[data-brand-toggle]');
+        if (!trigger) return;
+        event.preventDefault();
+        const brand = document.querySelector('[data-brand-toggle].site-brand');
+        if (!brand) return;
+        brand.classList.remove('is-awakened');
+        requestAnimationFrame(() => brand.classList.add('is-awakened'));
+      });
+
       document.addEventListener('click', (event) => {
         const toggle = event.target.closest('[data-theme-toggle]');
         if (!toggle) return;
