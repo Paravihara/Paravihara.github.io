@@ -110,8 +110,8 @@ button { font: inherit; }
 .site-mark {
   position: relative;
   display: grid;
-  width: 16rem;
-  height: 16rem;
+  width: 12rem;
+  height: 12rem;
   margin: 0 auto 1rem;
   place-items: center;
   isolation: isolate;
@@ -303,7 +303,7 @@ html[lang='en'] body { font-variant-numeric: lining-nums proportional-nums; }
   .site-aside { position: static; display: grid; grid-template-columns: 1fr; grid-template-rows: auto; width: auto; margin: 0 1.5rem; padding: 1.5rem 0 2rem; justify-items: center; row-gap: 1.4rem; }
   .site-aside__intro { grid-column: auto; grid-row: auto; margin-bottom: 0; }
   .site-brand { width: 100%; align-items: center; }
-  .site-mark { width: 12.4rem; height: 12.4rem; margin-bottom: .7rem; }
+  .site-mark { width: 9.3rem; height: 9.3rem; margin-bottom: .7rem; }
   .site-brand.is-awakened .site-title { padding: .25rem .4rem; transform: translateY(.15rem); }
   .site-brand.is-pull-preview .site-title { padding: .25rem .4rem; transform: translateY(.15rem); }
   .site-title { flex-direction: row; align-items: baseline; border-left: 0; padding: 0; font-size: 1.1rem; writing-mode: horizontal-tb; }
